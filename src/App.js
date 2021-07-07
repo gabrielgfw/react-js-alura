@@ -4,10 +4,15 @@ import FormularioCadastro from './components/FormularioCadastro/FormularioCadast
 import './assets/App.css';
 
 class App extends Component {
+
+  criarNota(titulo, descricao) {
+    console.log(`Criando: ${titulo} | ${descricao}`);
+  }
+
   render() {
     return (
       <section className="conteudo">
-        <FormularioCadastro />
+        <FormularioCadastro criarNota={this.criarNota} />
         <ListaDeNotas />
       </section>
     );
