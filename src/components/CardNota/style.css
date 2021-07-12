@@ -11,10 +11,16 @@
 }
 
 .card-nota_cabecalho {
+  width: 100%;
   font-size: 1.1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.card-nota_icon:hover {
+  fill: red;
+  transition: fill 0.25s;
 }
 
 .card-nota_texto {
