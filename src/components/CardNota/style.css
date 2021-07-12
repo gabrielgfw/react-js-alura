@@ -23,6 +23,10 @@
   transition: fill 0.25s;
 }
 
+.card-nota_icon:active {
+  fill: rgb(255, 147, 147);
+}
+
 .card-nota_texto {
   margin-top: 8px;
   font-size: 1em;
