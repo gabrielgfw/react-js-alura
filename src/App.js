@@ -9,17 +9,13 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      notas: []
+      notas: [],
+      categorias: [],
     };
   }
 
   criarNota(titulo, descricao) {
-    const novaNota = {titulo, descricao};
-    const novoArrayNotas = [...this.state.notas, novaNota];
-    const novoEstado = {
-      notas: novoArrayNotas
-    }
-    this.setState(novoEstado);
+    this.setState({notas: [...this.state.notas, {titulo, descricao}]});
   }
 
   apagarNota(index) {
@@ -28,12 +24,20 @@ class App extends Component {
     this.setState({ notas: arrayNotas });
   }
 
+  criarCategoria(categoria) {
+    this.setState({ categorias: [...this.state.categorias, categoria] });
+  }
+
+
   render() {
     return (
       <section className="conteudo">
         <FormularioCadastro criarNota={this.criarNota.bind(this)} />
         <main className="conteudo-principal">
-          <ListaCategorias />
+          <ListaCategorias 
+            categorias={this.state.categorias}
+            criarCategoria={this.criarCategoria.bind(this)}
+          />
           <ListaDeNotas 
             notas={this.state.notas}
             apagarNota={this.apagarNota.bind(this)}

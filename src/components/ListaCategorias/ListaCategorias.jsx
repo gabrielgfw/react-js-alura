@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
+import { isDOMComponent } from 'react-dom/test-utils';
 import './style.css';
 
 class ListaCategorias extends Component {
   
   _handleEventoInput(e) {
-    console.log(e.key);
+    if(e.key == "Enter") {
+      const categoria = e.target.value;
+      this.props.criarCategoria(categoria);
+    }
   }
 
   render() { 
     return (
       <section className="categorias-conteudo">
         <ul>
-          <li>Jogos</li>
-          <li>Diversão</li>
-          <li>Lazer</li>
-          <li>Trabalho</li>
+          {this.props.categorias.map((categoria, index) => {
+            return <li indice={index}>{categoria}</li>
+          })}
         </ul>  
         <input 
           type="test" 

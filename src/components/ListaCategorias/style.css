@@ -10,6 +10,9 @@
 }
 
 .categorias-conteudo ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
   list-style-type: none;
 }
 
