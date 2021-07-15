@@ -3,10 +3,13 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(231, 228, 44);
   border-radius: 4px;
   flex-wrap: wrap;
-  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 6px rgba(0, 0, 0, 0.06);
+  text-shadow: 0 0px 3px rgb(0, 0, 0, 0.2);
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(53, 53, 53);
   padding: 16px;
 }
 
@@ -16,6 +19,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.card-nota_icon {
+  fill:rgb(53, 53, 53);
 }
 
 .card-nota_icon:hover {

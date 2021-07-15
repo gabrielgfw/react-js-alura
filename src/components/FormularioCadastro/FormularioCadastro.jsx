@@ -7,6 +7,7 @@ class FormularioCadastro extends Component {
     super(props);
     this.titulo = "";
     this.descricao = "";
+    this.categoria = "Sem Categoria";
   }
 
   _handleMudancaTitulo(event) {
@@ -19,16 +20,31 @@ class FormularioCadastro extends Component {
     this.descricao = event.target.value;
   }
 
+  _handleMudancaCategoria(event) {
+    event.stopPropagation();
+    this.categoria = event.target.value;
+  }
+
   _criarNota(event) {
     event.preventDefault();
     event.stopPropagation();
-    this.props.criarNota(this.titulo, this.descricao);
+    this.props.criarNota(this.titulo, this.descricao, this.categoria);
   }
 
   render() {
     return (
       <form className="form-cadastro"
         onSubmit={this._criarNota.bind(this)}>
+
+        <select 
+          className="form-cadastro_input"
+          onChange={this._handleMudancaCategoria.bind(this)}
+        >
+          <option>Sem categoria</option>
+          {this.props.categorias.map(categoria => {
+            return <option>{categoria}</option>
+          })}
+        </select>
 
         <input
           className="form-cadastro_input"

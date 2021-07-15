@@ -19,8 +19,10 @@
 
 .form-cadastro_submit {
   align-self: flex-end;
-  width: 30%;
+  padding: 10px;
+  width: 40%;
   background-color:rgb(47, 125, 170);
+  border-radius: 4px;
   color: white;
   font-weight: 400;
   cursor: pointer;

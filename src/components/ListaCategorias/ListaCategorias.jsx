@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { isDOMComponent } from 'react-dom/test-utils';
 import './style.css';
 
 class ListaCategorias extends Component {
