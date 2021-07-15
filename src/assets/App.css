@@ -1,5 +1,7 @@
 .conteudo {
+  height: 100vh;
   display: flex;
+  background-color: rgb(255, 251, 238);
 }
 
 .conteudo-principal {
