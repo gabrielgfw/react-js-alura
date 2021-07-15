@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ListaDeNotas from './components/ListaDeNotas/';
 import FormularioCadastro from './components/FormularioCadastro/FormularioCadastro';
 import './assets/App.css';
+import ListaCategorias from './components/ListaCategorias/ListaCategorias';
 
 class App extends Component {
 
@@ -31,10 +32,13 @@ class App extends Component {
     return (
       <section className="conteudo">
         <FormularioCadastro criarNota={this.criarNota.bind(this)} />
-        <ListaDeNotas 
-          notas={this.state.notas}
-          apagarNota={this.apagarNota.bind(this)}
-        />
+        <main className="conteudo-principal">
+          <ListaCategorias />
+          <ListaDeNotas 
+            notas={this.state.notas}
+            apagarNota={this.apagarNota.bind(this)}
+          />
+        </main>
       </section>
     );
   }

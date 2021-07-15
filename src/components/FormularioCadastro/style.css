@@ -23,6 +23,12 @@
   background-color:rgb(47, 125, 170);
   color: white;
   font-weight: 400;
+  cursor: pointer;
+  transition: all color 2s;
+}
+
+.form-cadastro_submit:hover {
+  background-color: rgb(80, 141, 177);
 }
 
 .form-cadastro_submit:active {

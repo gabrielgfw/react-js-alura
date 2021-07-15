@@ -1,0 +1,25 @@
+.categorias-conteudo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.categorias-conteudo input {
+  margin: 20px;
+  height: 30px;
+}
+
+.categorias-conteudo ul {
+  list-style-type: none;
+}
+
+.categorias-conteudo li {
+  background-color: rgb(105, 164, 253);
+  border-radius: 5%;
+  box-shadow: 0px 2px 10px rgba(167, 165, 165, 0.5);
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  margin: 5px;
+  padding: 10px;
+}
