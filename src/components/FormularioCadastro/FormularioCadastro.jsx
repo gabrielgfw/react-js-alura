@@ -15,6 +15,10 @@ class FormularioCadastro extends Component {
     this.props.categorias.inscrever(this._novasCategorias.bind(this));
   }
 
+  componentWillUnmount() {
+    this.props.categorias.desinscrever(this._novasCategorias.bind(this));
+  }
+
   _novasCategorias(categorias) {
     this.setState({...this.state, categorias})
   }
