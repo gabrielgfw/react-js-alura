@@ -3,16 +3,21 @@ import './style.css';
 
 class ListaCategorias extends Component {
   
+  constructor() {
+    super();
+    this.state = { categorias: [] };
+  }
+
   componentDidMount() {
     this.props.categorias.inscrever(this._novasCategorias.bind(this));
   }
 
   _novasCategorias(categorias) {
-    console.log(categorias);
+    this.setState({...this.state, categorias})
   }
 
   _handleEventoInput(e) {
-    if(e.key == "Enter") {
+    if(e.key === "Enter") {
       const categoria = e.target.value;
       this.props.criarCategoria(categoria);
     }
@@ -22,8 +27,8 @@ class ListaCategorias extends Component {
     return (
       <section className="categorias-conteudo">
         <ul>
-          {this.props.categorias.categorias.map((categoria, index) => {
-            return <li indice={index}>{categoria}</li>
+          {this.state.categorias.map((categoria, index) => {
+            return <li key={index}>{categoria}</li>
           })}
         </ul>  
         <input 

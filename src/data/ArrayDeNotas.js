@@ -8,10 +8,12 @@ export default class ArrayDeNotas {
   adicionarNota(titulo, texto, categoria) {
     const novaNota = new Nota(titulo, texto, categoria);
     this.notas.push(novaNota);
+    this.notificar();
   }
 
   deletarNota(index) {
     this.notas.splice(index, 1);
+    this.notificar();
   }
 
   inscrever(func) {
@@ -27,9 +29,9 @@ export default class ArrayDeNotas {
 }
 
 class Nota {
-  constructor(titulo, texto, categoria) {
+  constructor(titulo, descricao, categoria) {
     this.titulo = titulo;
-    this.texto = texto;
+    this.descricao = descricao;
     this.categoria = categoria;
   }
 }
