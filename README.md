@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Alura - ReactJS - Painel post-it
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse projeto é realizando seguindo a trilha ReactJS da plataforma de ensino Alura. <br> <br>
+## Funcionalidade
 
-## Available Scripts
+Permite a criação de post-it para você criar anotações decorrentes do seu dia a dia, possibilitando também a criação de categorias para acrescentar uma label ao seu post-it. <br> <br>
 
-In the project directory, you can run:
+## O que esperar no código deste projeto?
 
-### `yarn start`
+Seguindo boas práticas o projeto conta com uma arquitetura de divisão de componentes e modelagem de dados;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A gestão de atualização de estado da aplicação, separada entre os componentes que podem vir a gerar alguma necessidade de atualização visual, permitindo que apenas o componente alterado e não a aplicação como um todo seja atualizado;
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Aplicabilidade do padrão Observable para que a gestão de estados não seja centralizada e sim divida entre os componentes que fazem sentido, utilizando os ciclos de vida de um componente (componentDidMount, componentWillUnmount);
 
-### `yarn test`
+Utilização de props para compartilhamento de dados entre componentes e a gestão de states para a configuração de mudança de estados.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Abordagens de iterações para impressão em laço de um ou mais índices de um vetor de dados.
 
-### `yarn build`
+Manipulação de dados extraídos de um Form, assim como a limpeza dos dados a cada nova nota criada. <br> <br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Como testar a aplicação?
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Com o Git já instalado em sua máquina, crie uma pasta em algum local da sua máquina;
+Acesse o Git Bash, localizando a pasta criada através do terminal que foi aberto;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Utilize o comando `git clone https://github.com/gabrielgfw/react-js-alura.git`, você pode colar no terminal utilizando a combinação de teclas `shit + insert`;
 
-### `yarn eject`
+Certifique-se de que está dentro da pasta do projeto pelo terminal do git bash, sendo a pasta raiz do projeto nomeada `ceep`;
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Dê o comando `npm install` para que as depencências do package.json sejam instaladas em sua máquina;
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Após a instalação, utilize o comando `npm start` e aguarde a inicialização do servidor, será aberto uma nova aba automaticamente no seu navegador após a inicialização do servidor.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Agora é só utilizar! <br> <br>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Imagens da utilização da aplicação:
 
-## Learn More
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img src="https://raw.githubusercontent.com/gabrielgfw/react-js-alura/c1a95b9e0e98c38c76d9a7e1e2cea801ad800733/public/uso-01.png"></img>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br>
 
-### Code Splitting
+<img src="https://raw.githubusercontent.com/gabrielgfw/react-js-alura/c1a95b9e0e98c38c76d9a7e1e2cea801ad800733/public/uso-02.png"></img>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<br>
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="https://raw.githubusercontent.com/gabrielgfw/react-js-alura/c1a95b9e0e98c38c76d9a7e1e2cea801ad800733/public/uso-03.png"></img>
