@@ -8,15 +8,16 @@ class FormularioCadastro extends Component {
     this.titulo = "";
     this.descricao = "";
     this.categoria = "Sem Categoria";
-    this.state = { categorias: [] };
+    this.state = { titulo: '', descricao: '', categorias: [] };
+    this._novasCategorias = this._novasCategorias.bind(this);
   }
 
   componentDidMount() {
-    this.props.categorias.inscrever(this._novasCategorias.bind(this));
+    this.props.categorias.inscrever(this._novasCategorias); 
   }
 
   componentWillUnmount() {
-    this.props.categorias.desinscrever(this._novasCategorias.bind(this));
+    this.props.categorias.desinscrever(this._novasCategorias);
   }
 
   _novasCategorias(categorias) {
@@ -25,12 +26,12 @@ class FormularioCadastro extends Component {
 
   _handleMudancaTitulo(event) {
     event.stopPropagation();
-    this.titulo = event.target.value;
+    this.setState({...this.state, titulo: event.target.value});
   }
 
   _handleMudancaDescricao(event) {
     event.stopPropagation();
-    this.descricao = event.target.value;
+    this.setState({...this.state, descricao: event.target.value});
   }
 
   _handleMudancaCategoria(event) {
@@ -41,7 +42,12 @@ class FormularioCadastro extends Component {
   _criarNota(event) {
     event.preventDefault();
     event.stopPropagation();
-    this.props.criarNota(this.titulo, this.descricao, this.categoria);
+    this.props.criarNota(this.state.titulo, this.state.descricao, this.categoria);
+    this._limparFormulario();
+  }
+
+  _limparFormulario() {
+    this.setState({...this.state, titulo: '', descricao: ''});
   }
 
   render() {
@@ -64,6 +70,7 @@ class FormularioCadastro extends Component {
           type="text"
           placeholder="Título"
           onChange={this._handleMudancaTitulo.bind(this)}
+          value={this.state.titulo}
         />
 
         <textarea
@@ -71,6 +78,7 @@ class FormularioCadastro extends Component {
           rows={15}
           placeholder="Escreva sua nota..."
           onChange={this._handleMudancaDescricao.bind(this)}
+          value={this.state.descricao}
         />
 
         <button className="form-cadastro_input form-cadastro_submit">

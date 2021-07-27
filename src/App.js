@@ -19,6 +19,7 @@ class App extends Component {
       <section className="conteudo">
         <FormularioCadastro 
           categorias={this.categorias}
+          notas={this.notas}
           criarNota={this.notas.adicionarNota.bind(this.notas)}
         />
         <main className="conteudo-principal">
